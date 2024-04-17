@@ -1,0 +1,6 @@
+integration_type       = "HTTP_PROXY"
+connection_type        = "INTERNET"
+description            = "Example integration"
+integration_method     = "GET"
+integration_uri        = "https://www.google.com"
+payload_format_version = "1.0"
