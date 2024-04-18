@@ -18,7 +18,7 @@ module "api_gateway" {
 }
 
 module "api_gateway_integration" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/api_gateway_v2_stage/aws"
+  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/api_gateway_v2_integration/aws"
   version = "~> 1.0"
 
   api_id                 = module.api_gateway.api_gateway_id
