@@ -12,16 +12,17 @@
 
 resource "aws_apigatewayv2_integration" "integration" {
   api_id           = var.api_id
-  integration_type = var.integration_type # "AWS_PROXY"
+  integration_type = var.integration_type
 
   connection_id                 = var.connection_id
-  connection_type               = var.connection_type #"INTERNET"
+  connection_type               = var.connection_type
   content_handling_strategy     = var.content_handling_strategy
-  description                   = var.description        # "Lambda function"
-  integration_method            = var.integration_method # "POST"
+  credentials_arn               = var.credentials_arn
+  description                   = var.description
+  integration_method            = var.integration_method
   integration_subtype           = var.integration_subtype
-  integration_uri               = var.integration_uri        # module.lambda_function.lambda_function_invoke_arn
-  payload_format_version        = var.payload_format_version # "2.0"
+  integration_uri               = var.integration_uri
+  payload_format_version        = var.payload_format_version
   passthrough_behavior          = var.passthrough_behavior
   request_parameters            = var.request_parameters
   request_templates             = var.request_templates
