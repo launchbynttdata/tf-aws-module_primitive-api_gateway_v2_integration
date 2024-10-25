@@ -18,8 +18,7 @@ module "api_gateway" {
 }
 
 module "api_gateway_integration" {
-  source  = "terraform.registry.launch.nttdata.com/module_primitive/api_gateway_v2_integration/aws"
-  version = "~> 1.0"
+  source = "../.."
 
   api_id                 = module.api_gateway.api_gateway_id
   integration_type       = var.integration_type
@@ -32,7 +31,7 @@ module "api_gateway_integration" {
 
 module "resource_names" {
   source  = "terraform.registry.launch.nttdata.com/module_library/resource_name/launch"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
   for_each = var.resource_names_map
 
