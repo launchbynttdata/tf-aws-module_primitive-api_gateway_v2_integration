@@ -103,7 +103,7 @@ If `make check` target is successful, developer is good to commit the code to pr
 - runs `conftests`. `conftests` make sure `policy` checks are successful.
 - runs `terratest`. This is integration test suit.
 - runs `opa` tests
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -116,7 +116,7 @@ If `make check` target is successful, developer is good to commit the code to pr
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.73.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.44.0 |
 
 ## Modules
 
@@ -146,7 +146,7 @@ No modules.
 | <a name="input_payload_format_version"></a> [payload\_format\_version](#input\_payload\_format\_version) | The format of the payload sent to an integration. Version-specific details can be found at https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format. Valid values: `1.0`, `2.0`. Default is `2.0`. | `string` | `"2.0"` | no |
 | <a name="input_request_parameters"></a> [request\_parameters](#input\_request\_parameters) | For WebSocket APIs, an optional key-value map specifying request parameters that are passed from the method request to the backend. For HTTP APIs with a specified `integration_subtype`, a key-value map specifying parameters that are passed to `AWS_PROXY` integrations. For HTTP APIs without a specified `integration_subtype`, a key-value map specifying how to transform HTTP requests before sending them to the backend. See the Amazon API Gateway Developer Guide for details: https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html | `map(string)` | `{}` | no |
 | <a name="input_request_templates"></a> [request\_templates](#input\_request\_templates) | Optional map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs. | `map(string)` | `{}` | no |
-| <a name="input_response_parameters"></a> [response\_parameters](#input\_response\_parameters) | Optional mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs. `status_code` is in the range 200-599. For more info on configuring `mappings`, see https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html. | <pre>list(object({<br>    status_code = number<br>    mappings    = map(string)<br>  }))</pre> | `[]` | no |
+| <a name="input_response_parameters"></a> [response\_parameters](#input\_response\_parameters) | Optional mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs. `status_code` is in the range 200-599. For more info on configuring `mappings`, see https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html. | <pre>list(object({<br/>    status_code = number<br/>    mappings    = map(string)<br/>  }))</pre> | `[]` | no |
 | <a name="input_template_selection_expression"></a> [template\_selection\_expression](#input\_template\_selection\_expression) | Optional template selection expression for the integration. See https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions for details. | `string` | `null` | no |
 | <a name="input_timeout_milliseconds"></a> [timeout\_milliseconds](#input\_timeout\_milliseconds) | Optional custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and between 50 and 30,000 milliseconds for HTTP APIs. Terraform will only perform drift detection of its value when present in a configuration. The default timeout is 29 seconds for WebSocket APIs and 30 seconds for HTTP APIs. | `number` | `null` | no |
 | <a name="input_server_name_to_verify"></a> [server\_name\_to\_verify](#input\_server\_name\_to\_verify) | Optional TLS configuration for a private integration. Supported only HTTP APIs. If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting. | `string` | `null` | no |
@@ -157,4 +157,4 @@ No modules.
 |------|-------------|
 | <a name="output_api_gateway_integration_id"></a> [api\_gateway\_integration\_id](#output\_api\_gateway\_integration\_id) | Identifier of the Integration |
 | <a name="output_api_gateway_integration_response_selection_expression"></a> [api\_gateway\_integration\_response\_selection\_expression](#output\_api\_gateway\_integration\_response\_selection\_expression) | The Integration Response Selection Expression for the Integration. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
