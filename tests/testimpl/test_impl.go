@@ -18,8 +18,8 @@ func TestComposableComplete(t *testing.T, ctx types.TestContext) {
 	awsClient := GetAWSApiGatewayV2Client(t)
 
 	t.Run("TestApiGatewayV2Exists", func(t *testing.T) {
-		awsApiGatewayId := terraform.Output(t, ctx.TerratestTerraformOptions(), "api_gateway_id")
-		awsApiGatewayProtocolType := terraform.Output(t, ctx.TerratestTerraformOptions(), "api_protocol_type")
+		awsApiGatewayId := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "api_gateway_id")
+		awsApiGatewayProtocolType := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "api_protocol_type")
 
 		apiGateway, err := awsClient.GetApi(context.TODO(), &apigatewayv2.GetApiInput{
 			ApiId: &awsApiGatewayId,
@@ -33,8 +33,8 @@ func TestComposableComplete(t *testing.T, ctx types.TestContext) {
 	})
 
 	t.Run("TestApiGatewayV2IntegrationExists", func(t *testing.T) {
-		awsApiGatewayId := terraform.Output(t, ctx.TerratestTerraformOptions(), "api_gateway_id")
-		awsApiGatewayIntegrationId := terraform.Output(t, ctx.TerratestTerraformOptions(), "api_gateway_integration_id")
+		awsApiGatewayId := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "api_gateway_id")
+		awsApiGatewayIntegrationId := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "api_gateway_integration_id")
 
 		apiGatewayIntegration, err := awsClient.GetIntegration(context.TODO(), &apigatewayv2.GetIntegrationInput{
 			ApiId:         &awsApiGatewayId,
