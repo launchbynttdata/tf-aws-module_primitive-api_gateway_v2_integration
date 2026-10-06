@@ -30,8 +30,8 @@ github.com/aws/aws-sdk-go-v2/internal/v4a v1.5.3 h1:fuSCw4Z2qfRCztMPO3GXJNSiEp6W
 github.com/aws/aws-sdk-go-v2/internal/v4a v1.5.3/go.mod h1:6SxcHheD1pPR5+kWm1wGvjlL/YqUsh267sAfEmN4K7A=
 github.com/aws/aws-sdk-go-v2/service/acm v1.38.2 h1:ozcwethaFOi2ST9h6MKGq1GAIHP68tjiDqgkWVPwfR8=
 github.com/aws/aws-sdk-go-v2/service/acm v1.38.2/go.mod h1:HNtDOv4XmqExPxNIBp171KKc5ZoUJwHH9ZhlCcZmdt0=
-github.com/aws/aws-sdk-go-v2/service/apigatewayv2 v1.42.0 h1:nEXWFo6Dn3Ul0mS2uA6rlBmM0yz2bhqD9CCgiUKvENQ=
-github.com/aws/aws-sdk-go-v2/service/apigatewayv2 v1.42.0/go.mod h1:225ayquQQEfDBpkWbIYpN/JMBAA/pG5vyECRkrilvbI=
+github.com/aws/aws-sdk-go-v2/service/apigatewayv2 v1.43.0 h1:CafsMuvoOR8TLy83azbaO1DXXiTQfL48PXwf/CBuU3s=
+github.com/aws/aws-sdk-go-v2/service/apigatewayv2 v1.43.0/go.mod h1:225ayquQQEfDBpkWbIYpN/JMBAA/pG5vyECRkrilvbI=
 github.com/aws/aws-sdk-go-v2/service/autoscaling v1.66.1 h1:kGlbhb5GMfkP/bcqcbt3oDi50kwDTpRmNzYUY9LqbLk=
 github.com/aws/aws-sdk-go-v2/service/autoscaling v1.66.1/go.mod h1:z45kurrOonQepd3SN5LIgropAn1NGHwBn1yOMF+QVFU=
 github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.69.1 h1:2ANEV0YkO/NlWxVmHBui7w7NE3lHW2sJji+OtjKJwck=
